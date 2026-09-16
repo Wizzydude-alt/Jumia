@@ -1,0 +1,82 @@
+/* This file loads Tailwind's styles into our project.
+   These 3 lines are all you need — Tailwind handles the rest. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A tiny global style: remove default margin/padding from the page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERY — Category Essentials Tiles on Mobile
+   ============================================================ */
+@media (max-width: 640px) {
+  .essentials-section {
+    padding: 12px 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .essentials-heading {
+    font-size: 13.5px !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+    letter-spacing: -0.01em;
+  }
+
+  .essentials-grid {
+    gap: 8px !important;
+  }
+
+  .essential-tile-btn {
+    padding: 9px 5px !important;
+    min-height: 60px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  .essential-tile-text {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    padding: 0 2px !important;
+  }
+}
+
+/* Extra small mobile screens (e.g. iPhone SE, Galaxy Fold <= 380px) */
+@media (max-width: 380px) {
+  .essentials-section {
+    padding: 10px 8px !important;
+  }
+
+  .essentials-grid {
+    gap: 6px !important;
+  }
+
+  .essential-tile-btn {
+    padding: 8px 3px !important;
+    min-height: 56px !important;
+    border-radius: 10px !important;
+  }
+
+  .essential-tile-text {
+    font-size: 10px !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+  }
+}
